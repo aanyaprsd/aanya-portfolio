@@ -10,8 +10,8 @@ html {
 }
 
 body {
-    background: #f7f7fb;
-    color: #20202a;
+    background: #13131d;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
 }
@@ -24,8 +24,8 @@ a {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(247, 247, 251, 0.95);
-    border-bottom: 1px solid #ddddE8;
+    background: rgba(28, 28, 49, 0.95);
+    border-bottom: 1px solid #0a0a16;
 }
 
 .navbar {
