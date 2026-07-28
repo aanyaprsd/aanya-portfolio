@@ -141,10 +141,10 @@ main {
 
 .card {
     padding: 28px;
-    background: white;
-    border: 1px solid #ddddE8;
+    background: rgb(33, 34, 53);
+    border: 1px solid #212132;
     border-radius: 14px;
-    box-shadow: 0 8px 30px rgba(20, 20, 40, 0.06);
+    box-shadow: 0 8px 30px rgba(253, 253, 253, 0.06);
 }
 
 .card h3 {
@@ -162,7 +162,7 @@ main {
 footer {
     padding: 30px;
     text-align: center;
-    border-top: 1px solid #ddddE8;
+    border-top: 1px solid #141424;
 }
 
 @media (max-width: 700px) {
