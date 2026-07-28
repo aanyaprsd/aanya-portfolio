@@ -50,11 +50,25 @@ a {
 }
 
 .nav-links a {
+    display: inline-block;
     text-decoration: none;
+    letter-spacing: 0;
+
+    transition:
+        transform 0.25s ease,
+        text-shadow 0.25s ease,
+        letter-spacing 0.25s ease,
+        color 0.25s ease;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    letter-spacing: 0.05em;
+    transform: translateY(-3px) scale(1.05);
+    text-shadow:
+        0 0 10px rgba(121, 107, 245, 0.7),
+        0 0 20px rgba(121, 107, 245, 0.45),
+        0 0 35px rgba(121, 107, 245, 0.25);
 }
 
 main {
