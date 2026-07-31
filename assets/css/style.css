@@ -211,9 +211,9 @@ main {
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
+    gap: 12px;
 
-    margin-top: 30px;
+    margin-top: 24px;
 }
 
 
@@ -324,9 +324,6 @@ main {
 
     padding: 12px 20px;
 
-    margin-right: 12px;
-    margin-top: 12px;
-
     border: 1.5px solid #32324a;
     border-radius: 8px;
 
@@ -338,6 +335,14 @@ main {
         box-shadow 0.25s ease,
         background-color 0.25s ease,
         color 0.25s ease;
+    
+}
+
+.button-group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 24px;
 }
 
 .primary-button {
@@ -506,14 +511,6 @@ main {
     max-width: 500px;
 }
 
-.contact-form {
-    width: 100%;
-    max-width: 650px;
-}
-
-.contact-section .button {
-    margin-top: 24px;
-}
 .contact-form-container {
     position: relative;
     isolation: isolate;
@@ -697,17 +694,12 @@ footer {
     .headshot {
         width: min(320px, 82%);
     }
-}
 
-@media (max-width: 800px) {
     .contact-page {
         grid-template-columns: 1fr;
         gap: 45px;
         padding: 70px 0;
     }
-}
-
-@media (max-width: 700px) {
     .navbar {
         min-height: 64px;
     }
