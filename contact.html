@@ -21,110 +21,64 @@
 <body>
     <header class="site-header">
         <nav class="navbar">
-            <a class="logo" href="#home">AP</a>
+            <a class="logo" href="index.html">AP</a>
 
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <p class="eyebrow">Computer Science Student</p>
+        <section class="contact-page">
+            <div class="contact-intro">
+                <h1>Let's connect.</h1>
 
-            <h1>Let's connect.</h1>
-
-            <p class="hero-description">
-                Have a question?
-                Interested in collaborating?
-                Looking for an intern?
-
-                I'd love to hear from you!
-            </p>
-
-            <div class="hero-buttons">
-                <a class="button primary-button" href="#projects">
-                    View My Work
-                </a>
-
-                <a class="button secondary-button" href="#contact">
-                    Contact Me
-                </a>
-            </div>
-        </section>
-
-        <section id="about" class="content-section">
-            <h2>About Me</h2>
-
-            <p>
-                I enjoy creating technical projects, solving problems, and
-                learning how software and cybersecurity systems work. This
-                website will showcase my education, experience, projects,
-                leadership, and technical skills.
-            </p>
-        </section>
-
-        <section id="experience" class="content-section">
-            <h2>Experience</h2>
-
-            <article class="card">
-                <h3>Your Position</h3>
-                <p class="card-subtitle">Company or Organization</p>
-                <p>
-                    Your experience descriptions from your resume will go here.
+                <p class="hero-description">
+                    Have a question? <br>
+                    Interested in collaborating? <br>
+                    Looking for an intern?<br><br>
+                    I'd love to hear from you!
                 </p>
-            </article>
-        </section>
-
-        <section id="projects" class="content-section">
-            <h2>Projects</h2>
-
-            <div class="card-grid">
-                <article class="card">
-                    <h3>AI Semantic Model Analyzer</h3>
-
-                    <p>
-                        Developed an AI-powered tool to analyze semantic model 
-                        metadata, identify object usage and dependencies, and 
-                        automate reporting insights.
-                    </p>
-
-                    <a href="#" aria-label="View AI Semantic Model Analyzer">
-                        View project
-                    </a>
-                </article>
-
-                <article class="card">
-                    <h3>Personal Portfolio</h3>
-
-                    <p>
-                        Developed full-stack website features to organize
-                        my projects and visually represent my resume in a 
-                        digestible format.
-                    </p>
-
-                    <a href="#" aria-label="View additional project">
-                        View project
-                    </a>
-                </article>
             </div>
-        </section>
+            
+            <section id="contact" class="contact-section">
+                <div class = "contact-form-container">
+                    <form class="contact-form">
+                        <div class="form-field">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
 
-        <section id="contact" class="content-section">
-            <h2>Contact</h2>
+                        <div class="form-field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
 
-            <p>
-                I am open to internships, collaborative projects, and
-                opportunities to continue developing my technical skills.
-            </p>
+                        <div class="form-field">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
 
-            <a class="button primary-button" href="mailto:your-email@example.com">
-                Email Me
-            </a>
+                        <div class="form-field">
+                            <label for="message">Message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button class="button secondary-button" type="submit">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </section>
         </section>
     </main>
 
