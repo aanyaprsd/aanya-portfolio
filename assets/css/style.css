@@ -627,17 +627,120 @@ main {
     font-weight: bold;
 }
 
+/* ------------------------------
+   CAROUSEL STUFF
+------------------------------ */
+
+
+.carousel {
+    width: 135%;
+    overflow: hidden;
+
+    padding: 35px 0;
+
+    /* Softly fades the cards at each edge */
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 8%,
+        black 92%,
+        transparent
+    );
+
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 8%,
+        black 92%,
+        transparent
+    );
+}
+
+.carousel-track {
+    display: flex;
+    gap: 24px;
+
+    width: max-content;
+
+    animation: carousel-scroll 28s linear infinite;
+}
+
+.carousel .card {
+    flex: 0 0 340px;
+
+    min-height: 300px;
+    padding: 28px;
+
+    background: rgba(33, 34, 53, 0.88);
+    border: 1px solid #212132;
+    border-radius: 14px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.carousel:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+.carousel .card:hover {
+    position: relative;
+    z-index: 5;
+
+    transform: scale(1.05);
+
+    /* border-color: rgba(213, 109, 255, 0.65); */
+
+    background: rgba(39, 39, 62, 0.96);
+
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.35),
+        0 0 12px rgba(213, 109, 255, 0.4),
+        0 0 30px rgba(255, 124, 167, 0.22);
+}
+
+@keyframes carousel-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 12px));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel-track {
+        animation: none;
+    }
+
+    .carousel {
+        overflow-x: auto;
+    }
+}
+
 
 /* ------------------------------
    Footer
 ------------------------------ */
 
 footer {
-    padding: 30px;
+    padding: 18px;
 
     text-align: center;
+    /* border-top: 1px solid #27273f; */
+    
+    position: sticky;
+    bottom: 0;
+    z-index: 100;
 
-    border-top: 1px solid #27273f;
+    background: rgba(28, 28, 49, 0.32);
+    backdrop-filter: blur(10px);
 }
 
 .footer-content {
@@ -647,6 +750,7 @@ footer {
 
     width: min(1100px, 90%);
     margin: 0 auto;
+    max-height: 72px;
 }
 
 .social-icon {
@@ -727,5 +831,18 @@ footer {
         height: 220px;
 
         left: 35%;
+    }
+    .carousel .card {
+        flex-basis: 280px;
+        min-height: 280px;
+    }
+
+    .carousel-track {
+        gap: 18px;
+        animation-duration: 36s;
+    }
+
+    .carousel .card:hover {
+        transform: scale(1.03);
     }
 }
