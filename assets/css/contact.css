@@ -1,0 +1,120 @@
+/* ------------------------------
+    Contact Page Stuff
+------------------------------ */
+
+.contact-page {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: start;
+    gap: 70px;
+
+    min-height: calc(100vh - 72px);
+    padding: 100px 0;
+}
+
+.contact-intro h1 {
+    margin-bottom: 20px;
+
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 1;
+
+    background-image: linear-gradient(
+        275deg,
+        #fbb9db,
+        #fc3d79
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-intro p {
+    max-width: 500px;
+}
+
+/* ----------------------------------
+    form shaping
+----------------------------------- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    width: 100%;
+    max-width: 700px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field label {
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 14px 16px;
+
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+
+    font: inherit;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 160px;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(169, 110, 255, 0.8);
+
+    box-shadow:
+        0 0 0 3px rgba(169, 110, 255, 0.12),
+        0 0 22px rgba(169, 110, 255, 0.12);
+}
+.contact-form-container {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    max-width: 750px;
+}
+
+.contact-form-container::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    width: 700px;
+    height: 500px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    background: #ff5fa2;
+
+    filter: blur(110px);
+    opacity: 0.25;
+}
